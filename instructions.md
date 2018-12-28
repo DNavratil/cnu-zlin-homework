@@ -34,9 +34,9 @@ N
 
 5
 
-2,0;1,3;4,3;1,5
+3,0;1,3;4,3;1,5
 
-4,0
+4,1
 
 RRFLFRFF
 ```
@@ -49,9 +49,9 @@ N <- initial direction
 <empty line>
 5 <- landscape size
 <empty line>
-2,0;1,3;4,3;1,5 <- positions of inaccessible fields
+3,0;1,3;4,3;1,5 <- positions of inaccessible fields
 <empty line>
-4,0 <- final destination
+4,1 <- final destination
 <empty line>
 RRFLFRFF <- sequence of commands
 ```
@@ -67,7 +67,7 @@ N
 
 2,0;1,3;2,3;4,3
 
-2,3
+4,0
 
 RRFLFRFF
 ```
