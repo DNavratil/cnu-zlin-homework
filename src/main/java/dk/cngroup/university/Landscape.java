@@ -1,6 +1,6 @@
 package dk.cngroup.university;
 
-import java.util.Arrays;
+
 import java.util.List;
 
 public class Landscape {
@@ -11,9 +11,6 @@ public class Landscape {
 		insertInaccessibleFields(inaccessiblePositions);
 	}
 
-	public boolean isAccessible(Position position){
-		return true; // TODO implement
-	}
 
 	@Override
 	public String toString() {
@@ -25,13 +22,15 @@ public class Landscape {
 			output += "\n";
 		}
 		return output;
-	}
 
+
+	}
 	private void insertInaccessibleFields(List<Position> inaccessiblePositions) {
 		for (Position p : inaccessiblePositions) {
 			fields[p.x][p.y] = Field.INACCESSIBLE;
 		}
 	}
+
 
 	private void initAccessibleLandscape(int size) {
 		this.fields = new Field[size][size];
@@ -39,6 +38,24 @@ public class Landscape {
 			for (int j = 0; j < fields[i].length; j++){
 				fields[i][j] = Field.ACCESSIBLE;
 			}
+
 		}
+
 	}
+
+	public boolean isAccessible(Position position){
+
+		if(fields[position.x][position.y] == Field.ACCESSIBLE){
+			return true;
+		}
+		else{
+			return false;
+		}
+
+	}
+
+
 }
+
+
+

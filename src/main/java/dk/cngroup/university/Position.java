@@ -5,7 +5,6 @@ import java.util.Objects;
 public class Position {
 	public final int x;
 	public final int y;
-
 	public Position(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -15,7 +14,13 @@ public class Position {
 		switch (direction) {
 			case SOUTH:
 				return new Position(x + 1, y);
-			default: // TODO implement
+			case NORTH:
+				return new Position(x -1, y);
+			case EAST:
+				return new Position(x, y+1);
+			case WEST:
+				return new Position(x, y - 1);
+			default:
 				return this;
 		}
 	}
