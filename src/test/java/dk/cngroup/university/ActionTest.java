@@ -13,13 +13,13 @@ class ActionTest {
         Action right = Action.RIGHT;
         Rover rover = new Rover(Direction.WEST, new Position(0,0));
 
-        ArrayList<Position> nefi = new ArrayList<>();
-        nefi.add(new Position(3,0));
-        nefi.add(new Position(1,3));
-        nefi.add(new Position(4,3));
-        nefi.add(new Position(1,5));
+        ArrayList<Position> accessibleFiled = new ArrayList<>();
+        accessibleFiled.add(new Position(3,0));
+        accessibleFiled.add(new Position(1,3));
+        accessibleFiled.add(new Position(4,3));
+        accessibleFiled.add(new Position(1,5));
 
-        Landscape landscape = new Landscape(6, nefi);
+        Landscape landscape = new Landscape(6, accessibleFiled);
 
         Rover result = right.perform(rover, landscape);
         Rover expected = new Rover(Direction.NORTH, new Position(0,0));
@@ -31,13 +31,13 @@ class ActionTest {
         Action right = Action.LEFT;
         Rover rover = new Rover(Direction.WEST, new Position(0,0));
 
-        ArrayList<Position> nefi = new ArrayList<>();
-        nefi.add(new Position(3,0));
-        nefi.add(new Position(1,3));
-        nefi.add(new Position(4,3));
-        nefi.add(new Position(1,5));
+        ArrayList<Position> accessibleFiled = new ArrayList<>();
+        accessibleFiled.add(new Position(3,0));
+        accessibleFiled.add(new Position(1,3));
+        accessibleFiled.add(new Position(4,3));
+        accessibleFiled.add(new Position(1,5));
 
-        Landscape landscape = new Landscape(6, nefi);
+        Landscape landscape = new Landscape(6, accessibleFiled);
 
         Rover result = right.perform(rover, landscape);
         Rover expected = new Rover(Direction.SOUTH, new Position(0,0));
@@ -49,13 +49,13 @@ class ActionTest {
         Action forward = Action.FORWARD;
         Rover rover = new Rover(Direction.SOUTH, new Position(0,0));
 
-        ArrayList<Position> nefi = new ArrayList<>();
-        nefi.add(new Position(3,0));
-        nefi.add(new Position(1,3));
-        nefi.add(new Position(4,3));
-        nefi.add(new Position(1,5));
+        ArrayList<Position> accessibleFiled = new ArrayList<>();
+        accessibleFiled.add(new Position(3,0));
+        accessibleFiled.add(new Position(1,3));
+        accessibleFiled.add(new Position(4,3));
+        accessibleFiled.add(new Position(1,5));
 
-        Landscape landscape = new Landscape(6, nefi);
+        Landscape landscape = new Landscape(6, accessibleFiled);
 
         Rover result = forward.perform(rover, landscape);
         Rover expected = new Rover(Direction.SOUTH, new Position(1,0));
@@ -67,13 +67,13 @@ class ActionTest {
         Action back = Action.BACKWARD;
         Rover rover = new Rover(Direction.WEST, new Position(0,0));
 
-        ArrayList<Position> nefi = new ArrayList<>();
-        nefi.add(new Position(3,0));
-        nefi.add(new Position(1,3));
-        nefi.add(new Position(4,3));
-        nefi.add(new Position(1,5));
+        ArrayList<Position> accessibleFiled = new ArrayList<>();
+        accessibleFiled.add(new Position(3,0));
+        accessibleFiled.add(new Position(1,3));
+        accessibleFiled.add(new Position(4,3));
+        accessibleFiled.add(new Position(1,5));
 
-        Landscape landscape = new Landscape(6, nefi);
+        Landscape landscape = new Landscape(6, accessibleFiled);
 
         Rover result = back.perform(rover, landscape);
         Rover expected = new Rover(Direction.EAST, new Position(0,1));

@@ -7,6 +7,7 @@ public class Landscape {
 	private Field[][] fields;
 
 	public Landscape(int size, List<Position> inaccessiblePositions) {
+		fields = new Field[6][6];
 		initAccessibleLandscape(size);
 		insertInaccessibleFields(inaccessiblePositions);
 	}

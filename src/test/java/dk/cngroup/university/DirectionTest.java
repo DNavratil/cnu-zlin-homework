@@ -25,7 +25,8 @@ class DirectionTest {
 		testTurnRight(Direction.NORTH, Direction.EAST, "East should be right of north");
 	}
 
-    @Test//Left
+	// Left
+    @Test
     void testTurnLeftFromEast() {
         testTurnLeft(Direction.EAST, Direction.NORTH, "South should be left of north");
     }
@@ -45,7 +46,8 @@ class DirectionTest {
         testTurnLeft(Direction.NORTH, Direction.WEST, "East should be left of west");
     }
 
-    @Test//Back/
+    // Back
+    @Test
     void testTurnBackFromEast() {
         testTurnBack(Direction.EAST, Direction.WEST, "South should be back of west");
     }
